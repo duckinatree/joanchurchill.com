@@ -1,0 +1,123 @@
+body {
+    background: black;
+    margin:0px; padding:0px;
+    font: 14px/20px Helvetica, Arial, Verdana, Sans-Serif;
+    color:black;
+    min-width: 1100px;
+}
+
+.clear { clear:both; }
+
+.canvas { position: relative; z-index: 1; }
+
+#header { background: white; width:100%; height: 80px; overflow:hidden; }
+#header a { display:block; background: url("../images/header.png") no-repeat top left white; width:100%; height: 80px; overflow:hidden; }
+#header a span { display: none; }
+
+
+/* MENU */
+#menu { background:black; width:100%; height:40px; overflow:hidden; }
+#menu a { display: block; overflow: hidden; width: 50px; height:40px; background: url("../images/menu.png"); float:left; }
+#menu a span { display: none; }
+
+#menu a#current { width:176px; background-position: 0px 0px; margin-left:10px; }
+#menu a#current:hover { background-position: 0px -40px; }
+body.current #menu a#current { background-position: 0px -80px; }
+body.current #menu a#current:hover { background-position: 0px -80px; }
+
+#menu a#films { width:86px; background-position: -176px 0px;  }
+#menu a#films:hover { background-position: -176px -40px;  }
+body.films #menu a#films { background-position: -176px -80px;  }
+body.films #menu a#films:hover { background-position: -176px -80px;  }
+
+#menu a#biography { width:121px; background-position: -262px 0px; }
+#menu a#biography:hover { background-position: -262px -40px; }
+body.biography #menu a#biography { background-position: -262px -80px; }
+body.biography #menu a#biography:hover { background-position: -262px -80px; }
+
+#menu a#awards { width:100px; background-position: -383px 0px; }
+#menu a#awards:hover { background-position: -383px -40px; }
+body.awards #menu a#awards { background-position: -383px -80px; }
+body.awards #menu a#awards:hover { background-position: -383px -80px; }
+
+#menu a#links { width:83px; background-position: -483px 0px; }
+#menu a#links:hover { background-position: -483px -40px; }
+body.links #menu a#links { background-position: -483px -80px; }
+body.links #menu a#links:hover { background-position: -483px -80px; }
+
+#menu a#contact { width:100px; background-position: -566px 0px; float:right; margin-right:10px; }
+#menu a#contact:hover { background-position: -566px -40px; }
+body.contact #menu a#contact { background-position: -566px -80px; }
+body.contact #menu a#contact:hover { background-position: -566px -80px; }
+
+
+/* CONTENT */
+#content-canvas { position: relative; z-index:1; }
+#content-canvas img#background { position:absolute; width:100%; top:0px; left:0px; z-index: 2; }
+
+#content {
+    position: relative;
+    z-index:3;
+    width: 1000px;
+    margin: 0 auto 0 auto;
+    margin-top: 0px;
+}
+
+
+/* FOOTER */
+#footer { font-size: 16px; line-height: 26px; color:#CCCCCC; background: black; padding: 40px 100px; text-align: center; margin-top: 100px; border-top: 1px solid white; }
+#footer a { color:#CCCCCC; text-decoration:underline; }
+#footer a:hover { color:#FF3333; text-decoration:none; }
+#footer { visibility: hidden; }
+
+/* ARROWS */
+a.pgarrow { position:absolute; z-index: 10; top:490px; text-decoration: none; }
+a.pgarrow .arrow { display:block; width:50px; height:50px; overflow:hidden; float:left; background: url("../images/arrows.png"); }
+a.pgarrow:hover .arrow { background-position: 0px -50px; }
+a.pgarrow .hint { display:none; }
+a.pgarrow:hover .hint { display:block; height:50px; font:italic 21px/50px Georgia, Sans-Serif; color:white; background: black; float:left; padding: 0px 20px; text-decoration:none; d}
+
+a.pgarrow.next { right:0px; }
+a.pgarrow.next .arrow { float:right; background-position: -50px 0px; }
+a.pgarrow.next:hover .arrow { background-position: -50px -50px; }
+a.pgarrow:hover .hint { float:right; }
+
+
+/* TEXT PANES*/
+h2 { font: italic 25px/30px Georgia, Sans-Serif; margin-top:0px; padding:0px; }
+h3 { font: bold 16px/19px Helvetica, Arial, Sans-Serif; margin:0px; padding:0px; }
+
+dl { margin-bottom: 60px; }
+dt { margin-top: 20px; font-weight: bold; }
+dd { margin: 0px; }
+
+.pane { background: url("../images/transparent.png") repeat; color:black; }
+.pane a { color:black; text-decoration: none; font-weight: bold; }
+.pane a:hover { color:#FF3333; }
+
+.pane .contents { padding:30px; }
+
+.lrg.pane { width:540px; }
+.sml.pane { width: 290px; }
+
+/* CURRENT */
+body.current .sml.pane { float:left; margin-top:600px; margin-right:40px; margin-left:65px; }
+body.current .lrg.pane { float:left; margin-top: 350px; }
+
+/* BIOGRAPHY */
+body.biography .lrg.pane { float:left; margin-top: 180px; margin-right:30px; }
+body.biography .sml.pane { float:left; margin-top: 480px; }
+
+/* FILMS */
+body.films .lrg.pane { float:left; margin-top: 290px; margin-right:30px; }
+body.films .sml.pane { float:left; margin-top: 480px; }
+
+/* AWARDS */
+body.awards .lrg.pane { float:left; margin-top: 260px; }
+
+/* LINKS */
+body.links .lrg.pane { float:left; margin-top: 180px; margin-right:30px; }
+body.links .sml.pane { float:left; margin-top: 400px; }
+
+/* CONTACT */
+body.contact .pane.lrg { float:left; margin-top: 370px; margin-right:30px; }
